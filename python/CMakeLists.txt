@@ -31,7 +31,7 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    lms-filter.py DESTINATION ${GR_PYTHON_DIR}/adaptative_filtering
+    lms-filter_ff.py DESTINATION ${GR_PYTHON_DIR}/adaptative_filtering
 )
 
 ########################################################################
@@ -41,4 +41,4 @@ include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-adaptative_filtering)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
-GR_ADD_TEST(qa_lms-filter ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_lms-filter.py)
+GR_ADD_TEST(qa_lms-filter_ff_ff ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_lms-filter_ff_ff.py)

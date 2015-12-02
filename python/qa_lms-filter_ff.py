@@ -19,24 +19,23 @@
 # Boston, MA 02110-1301, USA.
 # 
 
-import numpy
-from gnuradio import gr
+from gnuradio import gr, gr_unittest
+from gnuradio import blocks
+from lms-filter import lms-filter
 
-class lms-filter(gr.sync_block):
-    """
-    docstring for block lms-filter
-    """
-    def __init__(self, w0):
-        gr.sync_block.__init__(self,
-            name="lms-filter",
-            in_sig=[<+numpy.float+>],
-            out_sig=[<+numpy.float+>])
+class qa_lms-filter_ff (gr_unittest.TestCase):
+
+    def setUp (self):
+        self.tb = gr.top_block ()
+
+    def tearDown (self):
+        self.tb = None
+
+    def test_001_t (self):
+        # set up fg
+        self.tb.run ()
+        # check data
 
 
-    def work(self, input_items, output_items):
-        in0 = input_items[0]
-        out = output_items[0]
-        # <+signal processing here+>
-        out[:] = in0
-        return len(output_items[0])
-
+if __name__ == '__main__':
+    gr_unittest.run(qa_lms-filter_ff, "qa_lms-filter_ff.xml")

@@ -31,5 +31,5 @@ except ImportError:
 	pass
 
 # import any pure python here
-from lms-filter import lms-filter
+from lms-filter_ff import lms-filter_ff
 #

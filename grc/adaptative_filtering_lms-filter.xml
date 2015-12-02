@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
-  <name>lms-filter</name>
-  <key>adaptative_filtering_lms-filter</key>
+  <name>lms-filter_ff</name>
+  <key>adaptative_filtering_lms-filter_ff</key>
   <category>adaptative_filtering</category>
   <import>import adaptative_filtering</import>
-  <make>adaptative_filtering.lms-filter($w0)</make>
+  <make>adaptative_filtering.lms-filter_ff($w0)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
