@@ -1,19 +1,26 @@
 <?xml version="1.0"?>
 <block>
-  <name>lms-filter_ff</name>
-  <key>adaptative_filtering_lms-filter_ff</key>
-  <category>adaptative_filtering</category>
+  <name>LMS Filter</name>
+  <key>adaptative_filtering_lms_filter_ff</key>
+  <category>Adaptative filtering</category>
   <import>import adaptative_filtering</import>
-  <make>adaptative_filtering.lms-filter_ff($w0)</make>
+  <make>adaptative_filtering.lms_filter_ff($w0, $mu)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
   <param>
-    <name>...</name>
-    <key>...</key>
-    <type>...</type>
+    <name>Initial filter taps</name>
+    <key>w0</key>
+    <value>[0, 0]</value>
+    <type>real_vector</type>
+  </param>
+
+  <param>
+    <name>Step</name>
+    <key>mu</key>
+    <type>float</type>
   </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
@@ -22,8 +29,13 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <sink>
-    <name>in</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <name>ref</name>
+    <type>float</type>
+  </sink>
+
+  <sink>
+    <name>x</name>
+    <type>float</type>
   </sink>
 
   <!-- Make one 'source' node per output. Sub-nodes:
@@ -32,7 +44,11 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <name>out</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <name>y</name>
+    <type>float</type>
+  </source>
+  <source>
+    <name>err</name>
+    <type>float</type>
   </source>
 </block>

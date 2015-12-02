@@ -18,5 +18,5 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    adaptative_filtering_lms-filter_ff.xml DESTINATION share/gnuradio/grc/blocks
+    adaptative_filtering_lms_filter_ff.xml DESTINATION share/gnuradio/grc/blocks
 )
