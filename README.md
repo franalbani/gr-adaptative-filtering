@@ -1,2 +1,2 @@
-# gr-lms-filter
-GNURadio block for adaptative filtering using the LMS algorithm.
+# gr-adaptative-filtering
+GNURadio out-of-tree module for adaptative filtering.
